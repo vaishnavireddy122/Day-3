@@ -164,7 +164,7 @@ console.log(total); // 6
 </pre>
 
 <h3>find(), some(), and every()</h3>
-<h4>1. find()</h4> <br>
+<h4>1. find()</h4>
 🔹 What it does: <br>
 Finds the first item in an array that matches a condition and returns it.
 If no item matches, returns undefined. <br>
@@ -197,3 +197,24 @@ const allAdults = ages.every(age => age >= 18);
 console.log(allAdults); // false (because 12 and 17 are not adults)
 
 </pre>
+
+<h3>JavaScript vs TypeScript</h3>
+<h4>🔹 What is JavaScript?</h4>
+JavaScript (JS) is a programming language used mainly to make websites interactive.<br>
+It runs in browsers and on servers (with Node.js).<br>
+It's dynamically typed, meaning you don’t have to declare the data type of variables.<br>
+Example:
+<pre>
+  let message = "Hello";
+message = 123; // No error, JavaScript allows this
+</pre>
+
+<h4>🔹 What is TypeScript?</h4>
+TypeScript (TS) is a superset of JavaScript — it means all JavaScript code is valid TypeScript code.<br>
+TypeScript adds static typing — you declare types for variables, function parameters, etc.<br>
+It compiles (transpiles) down to plain JavaScript, so browsers can run it.<br>
+Helps catch errors before running the code.<br>
+Example:<br>
+let message: string = "Hello";
+message = 123; // Error: Type 'number' is not assignable to type 'string'
+
