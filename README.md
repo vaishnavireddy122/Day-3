@@ -104,3 +104,30 @@ Keys can be	           Strings only	                Any type (even objects!)
 Keeps order?	          No guarantee	               Yes
 Easy size check?	     No (Object.keys().length)	 Yes (map.size)
 </pre>
+
+<h3>FILTER</h3>
+<h4>✅ What is filter()?</h4>
+filter() is a built-in method for arrays in JavaScript.
+It creates a new array with only the items that pass a test (the test is a function you give it).
+📦 Basic Syntax:
+<pre>
+  array.filter(function(item) {
+  return condition;
+});
+</pre>
+item is each element in the array
+condition is a test that returns true (keep the item) or false (remove it)
+🔍 Simple Example: Filter Numbers
+<pre>
+  const numbers = [1, 2, 3, 4, 5];
+
+// Keep only numbers greater than 3
+const result = numbers.filter(num => num > 3);
+
+console.log(result); // ➡️ [4, 5]
+</pre>
+⚠️ Important Notes
+filter() does not change the original array.
+It returns a new array.
+It's very useful when combined with .map() and .reduce() in real apps.
+
