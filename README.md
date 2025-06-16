@@ -162,3 +162,38 @@ console.log(total); // 6
 
 console.log(total); // 6
 </pre>
+
+<h3>find(), some(), and every()</h3>
+<h4>1. find()</h4> <br>
+🔹 What it does: <br>
+Finds the first item in an array that matches a condition and returns it.
+If no item matches, returns undefined. <br>
+🔹 Example:<br>
+<pre>const numbers = [5, 12, 8, 130, 44];
+// Find the first number greater than 10
+const found = numbers.find(num => num > 10);
+console.log(found); // 12
+</pre>
+<h4>2. some()</h4>
+🔹 What it does:<br>
+Checks if at least one item in the array passes the test.<br>
+Returns true or false.<br>
+<pre>
+  const ages = [3, 10, 18, 20];
+// Is there at least one adult (age >= 18)?
+const hasAdult = ages.some(age => age >= 18);
+console.log(hasAdult); // true
+</pre>
+<h4>3. every()
+🔹 What it does:</h4>
+Checks if all items in the array pass the test.<br>
+Returns true or false.<br>
+<pre>
+  const ages = [12, 17, 20, 25];
+
+// Are all people adults (age >= 18)?
+const allAdults = ages.every(age => age >= 18);
+
+console.log(allAdults); // false (because 12 and 17 are not adults)
+
+</pre>
