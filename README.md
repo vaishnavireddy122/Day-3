@@ -55,15 +55,15 @@ Objects can contain other objects:
 </pre>
 <h3>MAP:</h3>
 <h5>What is a Map?</h5>
-A Map is like a container that stores things in pairs:
-🔑 a key and
-📦 a value.
-You use a key to find its value, just like a label on a storage box.
+A Map is like a container that stores things in pairs:<br>
+🔑 a key and <br>
+📦 a value. <br>
+You use a key to find its value, just like a label on a storage box.<br>
 <h5>🧠 Why not just use an Object {}?</h5>
-You can — but Map is better when:
-You want to use any type of key (not just strings).
-You need to keep the order of items.
-You need better performance when adding/removing items often.
+You can — but Map is better when:<br>
+You want to use any type of key (not just strings).<br>
+You need to keep the order of items.<br>
+You need better performance when adding/removing items often.<br>
 <pre>
  const myMap = new Map();
 // Add items
@@ -75,16 +75,16 @@ console.log(myMap.get("name")); // ➡️ "Alice"
 console.log(myMap.get("age"));  // ➡️ 25
 </pre>
 <h4>📌 Important Things to Remember</h4>
-🔹 Adding Data
-   myMap.set("color", "blue");
-🔹 Getting Data
-   console.log(myMap.get("color")); // "blue"
-🔹 Checking if a Key Exists
-   console.log(myMap.has("color")); // true
-🔹 Removing a Key
-   myMap.delete("color");
-🔹 Checking How Many Items Are Inside
-   console.log(myMap.size); // 2 (if two items are added)
+🔹 Adding Data<br>
+   myMap.set("color", "blue");<br>
+🔹 Getting Data<br>
+   console.log(myMap.get("color")); // "blue"<br>
+🔹 Checking if a Key Exists<br>
+   console.log(myMap.has("color")); // true<br>
+🔹 Removing a Key<br>
+   myMap.delete("color");<br>
+🔹 Checking How Many Items Are Inside<br>
+   console.log(myMap.size); // 2 (if two items are added)<br>
 <h5>🌀 Looping Through a Map</h5>
 <pre>const map = new Map();
 map.set("a", 1);
@@ -97,7 +97,7 @@ for (let [key, value] of map) {
 // a = 1
 // b = 2
 </pre>
-🆚 Map vs Object Summary (Very Simple)
+🆚 Map vs Object Summary (Very Simple)<br>
 <pre>
   Feature	             Object	                    Map
 Keys can be	           Strings only	                Any type (even objects!)
@@ -107,17 +107,17 @@ Easy size check?	     No (Object.keys().length)	 Yes (map.size)
 
 <h3>FILTER:</h3>
 <h4>✅ What is filter()?</h4>
-filter() is a built-in method for arrays in JavaScript.
-It creates a new array with only the items that pass a test (the test is a function you give it).
-📦 Basic Syntax:
+filter() is a built-in method for arrays in JavaScript.<br>
+It creates a new array with only the items that pass a test (the test is a function you give it).<br>
+📦 Basic Syntax:<br>
 <pre>
   array.filter(function(item) {
   return condition;
 });
 </pre>
-item is each element in the array
-condition is a test that returns true (keep the item) or false (remove it)
-🔍 Simple Example: Filter Numbers
+item is each element in the array<br>
+condition is a test that returns true (keep the item) or false (remove it)<br>
+🔍 Simple Example: Filter Numbers<br>
 <pre>
   const numbers = [1, 2, 3, 4, 5];
 
@@ -133,18 +133,20 @@ It's very useful when combined with .map() and .reduce() in real apps.
 
 <h3>REDUCE:</h3>
 <h4>✅ What is reduce()?</h4>
-reduce() is used to combine all values in an array into a single value — like a sum, product, object, or anything you want.
+reduce() is used to combine all values in an array into a single value — like a sum, product, object, or anything you want.<br>
 You give it a function, and it applies that function to each item in the array, building up a final result
-📦 Basic Syntax:
-  array.reduce((accumulator, currentValue) => {
+📦 Basic Syntax:<br>
+ <pre>array.reduce((accumulator, currentValue) => {
   return newValue;
 }, initialValue);
-accumulator	::: The running total or result so far
-currentValue :::	The current item in the array
-initialValue :::	The starting value for the accumulator (can be number, object, etc.)
-Example ::const numbers = [1, 2, 3];
-You want to add all the numbers together.
-✅ Without reduce():
+</pre>
+<br>
+accumulator	::: The running total or result so far<br>
+currentValue :::	The current item in the array<br>
+initialValue :::	The starting value for the accumulator (can be number, object, etc.)<br>
+Example ::const numbers = [1, 2, 3];<br>
+You want to add all the numbers together.<br>
+✅ Without reduce():<br>
 <pre>
   let total = 0;
 for (let i = 0; i < numbers.length; i++) {
@@ -159,5 +161,4 @@ console.log(total); // 6
 }, 0);
 
 console.log(total); // 6
-
 </pre>
