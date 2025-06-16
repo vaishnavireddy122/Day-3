@@ -53,7 +53,7 @@ Objects can contain other objects:
  };
  console.log(car.owner.name);  // Bob
 </pre>
-<h3>MAP</h3>
+<h3>MAP:</h3>
 <h5>What is a Map?</h5>
 A Map is like a container that stores things in pairs:
 🔑 a key and
@@ -105,7 +105,7 @@ Keeps order?	          No guarantee	               Yes
 Easy size check?	     No (Object.keys().length)	 Yes (map.size)
 </pre>
 
-<h3>FILTER</h3>
+<h3>FILTER:</h3>
 <h4>✅ What is filter()?</h4>
 filter() is a built-in method for arrays in JavaScript.
 It creates a new array with only the items that pass a test (the test is a function you give it).
@@ -131,3 +131,33 @@ filter() does not change the original array.
 It returns a new array.
 It's very useful when combined with .map() and .reduce() in real apps.
 
+<h3>REDUCE:</h3>
+<h4>✅ What is reduce()?</h4>
+reduce() is used to combine all values in an array into a single value — like a sum, product, object, or anything you want.
+You give it a function, and it applies that function to each item in the array, building up a final result
+📦 Basic Syntax:
+  array.reduce((accumulator, currentValue) => {
+  return newValue;
+}, initialValue);
+accumulator	::: The running total or result so far
+currentValue :::	The current item in the array
+initialValue :::	The starting value for the accumulator (can be number, object, etc.)
+Example ::const numbers = [1, 2, 3];
+You want to add all the numbers together.
+✅ Without reduce():
+<pre>
+  let total = 0;
+for (let i = 0; i < numbers.length; i++) {
+  total = total + numbers[i];
+}
+console.log(total); // 6
+</pre>
+✅ Now with reduce():
+<pre>
+  const total = numbers.reduce((sum, num) => {
+  return sum + num;
+}, 0);
+
+console.log(total); // 6
+
+</pre>
