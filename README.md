@@ -184,8 +184,8 @@ Returns true or false.<br>
 const hasAdult = ages.some(age => age >= 18);
 console.log(hasAdult); // true
 </pre>
-<h4>3. every()
-🔹 What it does:</h4>
+<h4>3. every()</h4>
+🔹 What it does:<br>
 Checks if all items in the array pass the test.<br>
 Returns true or false.<br>
 <pre>
@@ -215,6 +215,8 @@ TypeScript adds static typing — you declare types for variables, function para
 It compiles (transpiles) down to plain JavaScript, so browsers can run it.<br>
 Helps catch errors before running the code.<br>
 Example:<br>
-let message: string = "Hello";
+<pre>
+  let message: string = "Hello";
 message = 123; // Error: Type 'number' is not assignable to type 'string'
+</pre>
 
