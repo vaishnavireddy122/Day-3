@@ -50,7 +50,57 @@ Objects can contain other objects:
     name: "Bob",
     age: 40
   }
-};
-console.log(car.owner.name);  // Bob
+ };
+ console.log(car.owner.name);  // Bob
+</pre>
+<h3>MAP</h3>
+<h5>What is a Map?</h5>
+A Map is like a container that stores things in pairs:
+🔑 a key and
+📦 a value.
+You use a key to find its value, just like a label on a storage box.
+<h5>🧠 Why not just use an Object {}?</h5>
+You can — but Map is better when:
+You want to use any type of key (not just strings).
+You need to keep the order of items.
+You need better performance when adding/removing items often.
+<pre>
+ const myMap = new Map();
+// Add items
+myMap.set("name", "Alice");
+myMap.set("age", 25);
 
+// Get items
+console.log(myMap.get("name")); // ➡️ "Alice"
+console.log(myMap.get("age"));  // ➡️ 25
+</pre>
+<h4>📌 Important Things to Remember</h4>
+🔹 Adding Data
+   myMap.set("color", "blue");
+🔹 Getting Data
+   console.log(myMap.get("color")); // "blue"
+🔹 Checking if a Key Exists
+   console.log(myMap.has("color")); // true
+🔹 Removing a Key
+   myMap.delete("color");
+🔹 Checking How Many Items Are Inside
+   console.log(myMap.size); // 2 (if two items are added)
+<h5>🌀 Looping Through a Map</h5>
+<pre>const map = new Map();
+map.set("a", 1);
+map.set("b", 2);
+
+for (let [key, value] of map) {
+  console.log(`${key} = ${value}`);
+}
+// Output:
+// a = 1
+// b = 2
+</pre>
+
+<pre>
+  Feature	             Object	                    Map
+Keys can be	           Strings only	              Any type (even objects!)
+Keeps order?	         No guarantee	              Yes
+Easy size check?	     No (Object.keys().length)	Yes (map.size)
 </pre>
