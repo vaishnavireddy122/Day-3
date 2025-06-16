@@ -97,10 +97,10 @@ for (let [key, value] of map) {
 // a = 1
 // b = 2
 </pre>
-
+🆚 Map vs Object Summary (Very Simple)
 <pre>
   Feature	             Object	                    Map
-Keys can be	           Strings only	              Any type (even objects!)
-Keeps order?	         No guarantee	              Yes
-Easy size check?	     No (Object.keys().length)	Yes (map.size)
+Keys can be	           Strings only	                Any type (even objects!)
+Keeps order?	          No guarantee	               Yes
+Easy size check?	     No (Object.keys().length)	 Yes (map.size)
 </pre>
